@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ManthEn Device Monitoring</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #07031e;
+        }
+
+        .hardware-list {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .component {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 200px;
+            text-align: left;
+        }
+
+        .component h2 {
+            color: #333f0a;
+        }
+
+        .status {
+            margin: 10px 0;
+            font-weight: bold;
+        }
+
+        .status.good {
+            color: green;
+        }
+
+        .status.warning {
+            color: rgb(249, 249, 7);
+        }
+
+        .status.critical {
+            color: red;
+        }
+
+        .notification {
+            background-color: #f44336;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            margin-top: 20px;
+            display: none; /* Hidden by default */
+        }
+
+        .footer {
+            margin-top: 30px;
+            color: #777;
+        }
+
+        .abnormality-percentage {
+            font-size: 18px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>ManthEn Device - Hardware Monitoring</h1>
+
+    <div class="hardware-list">
+        <div class="component">
+            <h2>Camera</h2>
+            <p class="abnormality-percentage" id="cameraPercentage">Abnormality: 0%</p>
+            <p class="status" id="cameraStatus">Checking status...</p>
+        </div>
+        <div class="component">
+            <h2>Temperature Sensor</h2>
+            <p class="abnormality-percentage" id="temperaturePercentage">Abnormality: 0%</p>
+            <p class="status" id="temperatureStatus">Checking status...</p>
+        </div>
+        <div class="component">
+            <h2>Power Supply</h2>
+            <p class="abnormality-percentage" id="powerPercentage">Abnormality: 0%</p>
+            <p class="status" id="powerStatus">Checking status...</p>
+        </div>
+        <div class="component">
+            <h2>Cooling System</h2>
+            <p class="abnormality-percentage" id="coolingPercentage">Abnormality: 0%</p>
+            <p class="status" id="coolingStatus">Checking status...</p>
+        </div>
+        <div class="component">
+            <h2>Storage</h2>
+            <p class="abnormality-percentage" id="storagePercentage">Abnormality: 0%</p>
+            <p class="status" id="storageStatus">Checking status...</p>
+        </div>
+    </div>
+
+    <div id="notification" class="notification"></div>
+
+    <div class="footer">
+        <p>ManthEn Device Monitoring System © 2024</p>
+    </div>
+
+    <script src="app4.js"></script>
+</body>
+</html>
